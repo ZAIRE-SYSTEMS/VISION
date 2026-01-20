@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZAIRE VISION – Dashboard</title>
+  <link rel="stylesheet" href="./dashStyle.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- HEADER -->
+    <header class="dash-header">
+      <div class="dash-header-left">
+        <div class="dash-username" id="dash-username">Rider</div>
+        <div class="dash-subtitle">ZAIRE VISION overview</div>
+      </div>
+      <div class="dash-header-right">
+        <button class="dash-icon-btn" id="bt-icon-btn">&#128246;</button>
+        <div class="dash-avatar" id="dash-avatar"><span>RV</span></div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD VIEW -->
+    <main class="dash-grid" id="dashboard-view">
+
+      <section class="dash-card dash-card--hero zaire-accent-bg">
+        <div class="dash-card-row">
+          <div>
+            <div class="dash-card-title">Bluetooth</div>
+            <div class="dash-card-main"><span id="bt-state">Disconnected</span></div>
+          </div>
+          <div class="dash-session-pill" id="bt-device-pill">
+            <span id="bt-device-name">No device</span>
+          </div>
+        </div>
+        <div class="dash-card-footer">
+          Auto-connect: <span id="bt-autoconnect">OFF</span> ·
+          Audio: <span id="bt-audio">Idle</span>
+        </div>
+      </section>
+
+      <!-- MEDIA CARD -->
+      <section class="dash-card" id="media-card">
+        <div class="dash-card-title">Media</div>
+
+        <div class="media-preview-row">
+          <div class="media-preview">
+            <div class="media-preview-thumb"></div>
+            <div class="media-preview-label">
+              <span id="photos-count">0</span> Photos
+            </div>
+          </div>
+
+          <div class="media-preview">
+            <div class="media-preview-thumb video"></div>
+            <div class="media-preview-label">
+              <span id="videos-count">0</span> Videos
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-card-footer">
+          Last media: <span id="media-last">--:--</span>
+        </div>
+      </section>
+
+      <section class="dash-card">
+        <div class="dash-card-title">Top speed</div>
+        <div class="dash-card-main"><span id="top-speed">0</span> mph</div>
+      </section>
+
+      <section class="dash-card">
+        <div class="dash-card-title">Top altitude</div>
+        <div class="dash-card-main"><span id="top-height">0</span> m</div>
+      </section>
+
+      <section class="dash-card">
+        <div class="dash-card-title">Top acceleration</div>
+        <div class="dash-card-main"><span id="top-accel">0.0</span> m/s²</div>
+      </section>
+
+      <section class="dash-card">
+        <div class="dash-card-title">Walkie peers</div>
+        <div class="dash-card-main"><span id="walkie-peers">0</span></div>
+      </section>
+
+    </main>
+
+    <!-- MEDIA VIEW -->
+    <section class="media-view hidden" id="media-view">
+      <div class="photos-header">
+        <div class="photos-title">Media</div>
+        <div class="photos-count-label">
+          <span id="media-total-label">0</span> items
+        </div>
+      </div>
+      <div class="photos-grid" id="media-grid"></div>
+    </section>
+
+    <!-- WALKIE VIEW -->
+    <section class="walkie-view hidden" id="walkie-view"></section>
+
+    <!-- SETTINGS VIEW -->
+    <section class="settings-view hidden" id="settings-view"></section>
+
+    <!-- BOTTOM NAV -->
+    <nav class="dash-nav">
+      <button class="nav-item nav-item--active" id="nav-dashboard">
+        <span class="nav-icon">&#128202;</span>
+        <span class="nav-label">Dashboard</span>
+      </button>
+
+      <button class="nav-item" id="nav-media">
+        <span class="nav-icon">&#127909;</span>
+        <span class="nav-label">Media</span>
+      </button>
+
+      <button class="nav-item" id="nav-walkie">
+        <span class="nav-icon">&#128225;</span>
+        <span class="nav-label">Walkie</span>
+      </button>
+
+      <button class="nav-item" id="nav-settings">
+        <span class="nav-icon">&#9881;</span>
+        <span class="nav-label">Settings</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <script src="./data.js"></script>
+</body>
+</html>
