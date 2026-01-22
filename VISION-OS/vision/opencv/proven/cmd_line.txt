@@ -1,0 +1,5 @@
+
+
+1. take_photo: g++ -O3 -march=native -o capture capture.cpp `pkg-config --cflags --libs opencv4`
+
+
